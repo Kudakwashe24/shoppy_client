@@ -5,7 +5,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
-
+import { Login } from "./views/login";
 export default function App() {
   return (
     <Router>
@@ -13,7 +13,7 @@ export default function App() {
         <nav>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/">Login</Link>
             </li>
             <li>
               <Link to="/about">About</Link>
@@ -32,7 +32,7 @@ export default function App() {
         <Routes>
           <Route path="/about" element={<About />} />
           <Route path="/users" element={<Users />}> </Route>
-          <Route path="/" element={<Home />}> </Route>
+          <Route path="/" element={<Login />}> </Route>
           <Route path="/help" element={<Help />}> </Route>
         </Routes>
       </div>
@@ -40,13 +40,7 @@ export default function App() {
   );
 }
 
-function Home() {
-  return (
-    <div>
-      <h2>This is my home page</h2>
-    </div>
-  )
-}
+
 
 function About() {
   return <h2>About</h2>;
